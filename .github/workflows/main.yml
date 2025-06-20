@@ -8,4 +8,8 @@ jobs:
           uses: actions/checkout@v4
         - name: Welcome Message
           run: echo "Hello World"
-        
+        - name: Display Dog
+          run: |
+              sudo apt-get install cowsay -y
+              cowsay -f dog >> dog.txt
+              cat dog.txt
